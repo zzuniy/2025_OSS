@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to zzuniy’s Homepage (22400790) — Style 1</title>
+  <meta name="description" content="Same content, different stylesheet (Style 1). Demo inspired by W3Schools demo_default." />
+  <style>
+    /* ---------- CSS Variables (Theme) ---------- */
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --primary: #2563eb;
+      --primary-ink: #ffffff;
+      --ring: rgba(37, 99, 235, 0.2);
+      --border: #e2e8f0;
+      --shadow: 0 10px 25px rgba(2,6,23,.06);
+      --radius: 16px;
+      --maxw: 1100px;
+    }
+
+    /* ---------- Global Resets ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Apple SD Gothic Neo, "Malgun Gothic", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---------- Skip Link ---------- */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--ink);
+      color: #fff;
+      padding: .5rem .75rem;
+      border-radius: .5rem;
+    }
+    .skip-link:focus { left: .75rem; top: .75rem; z-index: 1000; }
+
+    /* ---------- Header ---------- */
+    header {
+      background: radial-gradient(1200px 300px at 10% -10%, #bfdbfe, transparent),
+                  linear-gradient(135deg, #e0f2fe 0%, #fafafa 55%, #fff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 2.25rem 1rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: end;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.4vw + 1rem, 2.2rem);
+      letter-spacing: -0.02em;
+    }
+    .badge {
+      display: inline-block;
+      padding: .35rem .6rem;
+      font-size: .85rem;
+      color: var(--primary);
+      background: #eef2ff;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+    }
+
+    /* ---------- Layout ---------- */
+    .wrap {
+      max-width: var(--maxw);
+      margin: 1.25rem auto 2.5rem;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 1.25rem;
+      padding: 0 1rem;
+    }
+    @media (max-width: 880px) {
+      .wrap { grid-template-columns: 1fr; }
+      aside { position: static; top: auto; }
+    }
+
+    /* ---------- Sidebar Menu ---------- */
+    aside {
+      position: sticky;
+      top: 1rem;
+      align-self: start;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: .75rem;
+    }
+    .menu-title {
+      margin: .25rem .5rem .5rem;
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--muted);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li a {
+      display: block;
+      padding: .625rem .75rem;
+      border-radius: .75rem;
+      border: 1px solid transparent;
+    }
+    nav li a:hover {
+      background: #f1f5f9;
+      border-color: var(--border);
+      text-decoration: none;
+    }
+    nav li a.current {
+      background: var(--primary);
+      color: var(--primary-ink);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px var(--ring);
+    }
+
+    /* ---------- Main ---------- */
+    main {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-top: .25rem;
+    }
+    h2 {
+      margin-top: 1.25rem;
+      font-size: 1.35rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+      margin-top: .75rem;
+    }
+    .card {
+      grid-column: span 12;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+    }
+    @media (min-width: 700px) {
+      .card.two { grid-column: span 7; }
+      .card.aside { grid-column: span 5; }
+    }
+    .muted { color: var(--muted); }
+
+    /* ---------- Footer ---------- */
+    footer {
+      max-width: var(--maxw);
+      margin: 1rem auto 2.5rem;
+      padding: 0 1rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    footer .foot {
+      border-top: 1px dashed var(--border);
+      padding-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1rem;
+      justify-content: space-between;
+    }
+    code {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: .4rem;
+      padding: .1rem .35rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: .9em;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">본문으로 바로가기</a>
+
+  <header role="banner">
+    <div class="header-inner">
+      <h1>Welcome to zzuniy’s Homepage (22400790)</h1>
+      <span class="badge" aria-hidden="true">Style&nbsp;1</span>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <aside aria-label="Stylesheet selection">
+      <div class="menu-title">Stylesheets</div>
+      <nav>
+        <ul>
+          <li><a class="current" href="./style1.html" aria-current="page">Stylesheet 1</a></li>
+          <li><a href="./style2.html">Stylesheet 2</a></li>
+          <li><a href="./nostyle.html">No Stylesheet</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="content" role="main">
+      <h2>Same Page, Different Stylesheets</h2>
+      <p class="lead">아래 본문은 동일하지만, <strong>Stylesheet</strong>만 바꾸면 전혀 다른 분위기의 페이지를 만들 수 있어요. 이 파일은 <em>Style&nbsp;1</em> 버전입니다.</p>
+
+      <div class="grid">
+        <section class="card two">
+          <h3>About this demo</h3>
+          <p class="muted">이 데모는 레이아웃과 색상을 CSS로만 바꾼 예시입니다. 마크업(HTML)은 그대로 두고, 변수/그리드/미디어쿼리 등 모던 CSS만 사용했습니다.</p>
+          <ul>
+            <li><strong>반응형</strong>: 화면이 좁아지면 사이드바가 위로 이동합니다.</li>
+            <li><strong>접근성</strong>: <code>skip-link</code>, <code>aria-current</code> 등을 적용했습니다.</li>
+            <li><strong>유지보수</strong>: 색상/길이값은 CSS 변수로 관리합니다.</li>
+          </ul>
+        </section>
+
+        <aside class="card aside">
+          <h3>Side‑Bar</h3>
+          <p>플레이스홀더 텍스트로 레이아웃을 확인해 보세요. 디자인만 다를 뿐, 콘텐츠 구조는 동일합니다.</p>
+          <p>콘텐츠가 길어져도 카드와 사이드바는 어울리도록 간격과 타이포를 조정했습니다.</p>
+        </aside>
+
+        <section class="card">
+          <h3>Sample Content</h3>
+          <p>“Same content, different presentation.” CSS는 문서의 의미 구조는 건드리지 않고, 시각적 표현만 바꿀 수 있게 해 줍니다. 팀에서는 같은 <code>HTML</code> 위에 여러 테마를 얹어 <em>브랜딩</em>이나 <em>접근성 모드</em>(라이트/다크)를 제공할 수 있습니다.</p>
+          <p>더 나아가 <strong>컴포넌트화</strong>된 CSS(예: BEM, Utility‑first 등)를 쓰면 규모가 커져도 일관성을 유지할 수 있습니다.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="foot">
+      <div>© 2025 zzuniy — Style 1</div>
+      <div>Files: <code>style1.html</code> · <code>style2.html</code> · <code>nostyle.html</code></div>
+    </div>
+  </footer>
+</body>
+</html>
