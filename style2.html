@@ -4,36 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root{
+            --bold : #4CAF50;
+            --butten_bold: #04AA6D;
+            --ink :black;
+            --sidebar:#f1f1f1;
+            --border: #d4d4d4;
+            --butten: #606060;
+
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding:10px;
+            font:100% Verdana;
+            font: 17px/1.4 arial;
+            color: var(--ink);
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        
+        a { color: var(--primary-ink);}
+
+        .bold{
+            color: var(--bold);
+            font-weight: bold;
+        }
+        .sides{
+            background: var(--sidebar);
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+            padding-top: 0px;
+        } 
+         .btn-link {
+            width: 140px;
+            display: inline-block;
+            background-color: var(--butten);
+            color: white;
+
+
+            padding: 4px 15px;
+            
+            margin: 1px;
+            text-decoration: none;    
+     
+            font-size: 17px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn-link:hover {
+            background-color: rgb(0, 0, 0);      
+        }
+        .btn-link1 {
+                width: 140px;
+                display: inline-block;
+                background-color: var(--butten_bold);
+                color: white;
+
+
+                padding: 4px 15px;
+                margin: 1px;
+                text-decoration: none;    
+        
+                font-size: 17px;
+                text-align: center;
+                cursor: pointer;
+        }
+        .btn-link1:hover {
+            background-color: rgb(0, 0, 0);      
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Hompage</h1>
-    <p>Use the menu to select different Stylesheets</p>
-    <li>Stylesheet 1 </li>
-    <li>Stylesheet 2 </li>
-    <li>No stylesheet </li>
+    <h1 class = "bold" style = "font-size: 35px; margin-top:10px; margin-bottom:0px">Welcome to My Hompage</h1>
+    <p style="padding-bottom: 20px; padding-top:0px">Use the menu to select different Stylesheets</p>
+ 
+    <a href="./index.html" class="btn-link">Main</a>
+    <a href="./style1.html" class="btn-link";>Stylesheet 1</a>
+    <a href="./style2.html" class="btn-link1">Stylesheet 2</a>
+    <a href="./bootstrap.html" class="btn-link">Bootstrap</a>
+    <a href="./nostyle.html "class="btn-link">No Stylesheet</a>
 
-    <h1>Same Page Different Stylesheets</h1>
+    <h1 class = "bold" style="font-size: 35px; margin-top:10px; margin-bottom:0px;">Same Page Different Stylesheets</h1>
 
-    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
+    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
 
-    
+    <br>
     <a href="./index.html">Main,</a>
-    <a href="./style1.html">Stylesheet 1,</a>
+    <a href="./style1.html" >Stylesheet 1,</a>
     <a href="./style2.html">Stylesheet 2,</a>
+    <a href="./bootstrap.html">Bootstrap,</a>
     <a href="./nostyle.html">No Stylesheet</a>
+    </p>
 
-    <h2>No styles</h2>
+    <h2 class = "bold"style="font-size: 25px">No styles</h2>
     
     <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
     <br>
     <a href="./nostyle.html">No Stylesheet.</a>
     </p>
 
-    <h3>Side-Bar</h3>
-
+    <div class="sides">
+    <h3 class = "bold" style="font-size: 18px">Side-Bar</h3>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+    </div>
+
+    <p style="font-size:12px;text-align: center; padding: 10px; margin-top: 0px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 
   </footer>
 </body>

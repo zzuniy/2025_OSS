@@ -4,36 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      :root{
+        --bg:#282c34;
+        --ink: white;
+        --gray: #686868;
+ 
+      }
+      body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding:10px;
+        font: 17px/1.4 arial;
+        color: var(--ink);
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        background-color: var(--bg);
+      }
+      
+      a { color: var(--gray); }
+  
+       main {
+            background: var(--box);
+            padding: 28rem;
+            padding-top: 150px;
+            padding-bottom: 0;
+        }
+
+        .btn-link {
+          
+            width: 100px;
+            display: inline-block;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 7px;
+
+            padding: 10px 5px;
+            margin: 5px;
+            text-decoration: none;    
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .btn-group {
+          font-weight: bold;
+          display: flex;  
+          gap: 10px;      
+        }
+      
+        .underline {         
+            text-decoration: none;       
+            text-decoration: underline;
+             text-decoration-thickness: 3px;
+            text-underline-offset: 4px;  
+            color: white;
+          }
+        .row {
+          display: flex;             
+          justify-content: space-between; 
+          align-items: right;
+          padding: 10px;
+          background-color: --bg;
+        }
+       
+
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Hompage</h1>
-    <p>Use the menu to select different Stylesheets</p>
-    <li>Stylesheet 1 </li>
-    <li>Stylesheet 2 </li>
-    <li>No stylesheet </li>
+  <div class="row">
+  <span><h1>Cover</h1></span>
+    <div class="btn-group">
+  <a href="./index.html" style = "text-decoration: none;  " >Main</a>
+  <a href="./style1.html"style = "text-decoration: none;  ">Stylesheet 1</a>
+  <a href="./style2.html"style = "text-decoration: none;  " >Stylesheet 2</a>
+  <a href="./bootstrap.html" class = "underline">Bootstrap</a>
+  <a href="./nostyle.html"style = "text-decoration: none;  ">No Stylesheet</a>
 
-    <h1>Same Page Different Stylesheets</h1>
+  </div>
+</div>
 
-    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
 
+  <main>
+    <h1 style=" text-align: center; font-size:40px; margin-bottom: 0px;">Cover your page.</h1>
     
-    <a href="./index.html">Main,</a>
-    <a href="./style1.html">Stylesheet 1,</a>
-    <a href="./style2.html">Stylesheet 2,</a>
-    <a href="./nostyle.html">No Stylesheet</a>
-
-    <h2>No styles</h2>
     
-    <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
-    <br>
-    <a href="./nostyle.html">No Stylesheet.</a>
-    </p>
+    <p style=" text-align: center; font-size: 20px;margin-top: 0px;">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <div style="text-align: center;">
+    <a href="./index.html" class="btn-link">Learn more</a>
+    </div>
+    </main>
 
-    <h3>Side-Bar</h3>
 
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+   <p style=" text-align: center; bottom: 10px; position: fixed; padding-left: 550px;">Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://github.com/zzuniy">zzuniy</a>.
 
   </footer>
 </body>
