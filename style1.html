@@ -4,37 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+            --bg:  rgb(209, 72, 54); 
+            --ink: #ffffff;
+            --muted: #000000;
+            --primary-ink:  rgb(209, 72, 54);
+            --border: #F6DAD7;
+            --box: #ffffff;
+      
+            }
+        body{
+            
+            font: 14px/1.4 arial;
+            
+
+            background-color: rgb(209, 72, 54);
+            color: var(--ink);
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        a { color: var(--primary-ink); text-decoration: none; }
+        main {
+            background: var(--box);
+            border: 1px solid var(--ink);
+            padding: 0.5rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            
+            
+        }
+
+        .sides{
+            background: var(--border);
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+       
+        } 
+        .line-example {
+            line-height: 0.5; 
+        }
+        .btn-link {
+            width: 140px;
+            display: inline-block;
+            background-color: rgb(209, 72, 54);
+            color: white;
+            border-radius: 40px;
+
+            padding: 5px 15px;
+            margin: 5px;
+            text-decoration: none;    
+            border-radius: 40px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            }
+            
+             .sidebar {
+                background-color: white;
+                margin-top: 10px;   
+                padding-right: 5px;         
+                right: 20px;            
+                display: flex;
+                flex-direction: column;  
+                }
+            .layout {
+                margin-top: 35px;
+                display: flex;          
+                align-items: flex-start;
+                background: white;
+            }
+            .style1-btn {
+            font-weight: bold;
+            width: 140px;
+            display: inline-block;
+            background-color: rgb(255, 255, 255);
+            color: rgb(209, 72, 54);
+            border-radius: 40px;
+            border: 1px solid rgb(209, 72, 54); 
+
+            padding: 3px 15px;
+            margin: 5px;
+            text-decoration: none;    
+            border-radius: 40px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            }
+
+                            
+
+    </style>
 </head>
+    <h1 style="font-size:60px; margin-top: 0; margin-bottom: 0; padding-left: 0.8rem;" >Welcome to My Homepage</h1>
+    <p style="font-size:30px;margin-top: 0; margin-bottom: 0; padding-left: 0.8rem;">Use the menu to select different Stylesheets</p>
 <body>
-    <h1>Welcome to My Hompage</h1>
-    <p>Use the menu to select different Stylesheets</p>
-    <li>Stylesheet 1 </li>
-    <li>Stylesheet 2 </li>
-    <li>No stylesheet </li>
-
-    <h1>Same Page Different Stylesheets</h1>
-
-    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
-
+      <div class="layout">
     
+ 
+    <main>  
+        <h1 p style="color: var(--bg)">Same Page Different Stylesheets</h1>
+
+    <p style="color: var(--muted)">This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+    <br>
     <a href="./index.html">Main,</a>
-    <a href="./style1.html">Stylesheet 1,</a>
+    <a href="./style1.html" >Stylesheet 1,</a>
     <a href="./style2.html">Stylesheet 2,</a>
+    <a href="./bootstrap.html">Bootstrap,</a>
     <a href="./nostyle.html">No Stylesheet</a>
-
-    <h2>No styles</h2>
-    
-    <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+    </p>
+    <h2 p style="color: var(--bg)">No styles</h2>
+    <p style="color: var(--muted)">This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
     <br>
     <a href="./nostyle.html">No Stylesheet.</a>
-    </p>
+    </main>
 
-    <h3>Side-Bar</h3>
 
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+    <div class="sidebar">
+    <a href="./index.html" class="btn-link">Main</a>
+    <a href="./style1.html" class="style1-btn";>Stylesheet 1</a>
+    <a href="./style2.html" class="btn-link">Stylesheet 2</a>
+    <a href="./bootstrap.html" class="btn-link">Bootstrap</a>
+    <a href="./nostyle.html "class="btn-link">No Stylesheet</a>
+    </div>
+    
+</div>
 
+    <div class="sides">
+        <h2 style="color: var(--bg); font-size:18px;">Side-Bar</h2>
+        <p style="color: var(--bg); font-size:15px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+      
+    <p style="font-size:11px;text-align: center;line-height: 2.0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+
+    
   </footer>
 </body>
 </html>
